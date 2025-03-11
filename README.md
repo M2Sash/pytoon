@@ -1,6 +1,6 @@
 # PyToon
 
-Python package for interacting with (Toonio)[https://toonio.ru] toon files.
+Python package for interacting with [Toonio](https:/en.toonio.ru) toon files.
 
 # For Educational & Fun Purposes Only! ⚠️
 
@@ -21,6 +21,8 @@ Toon = Toonio()
 # Login with username/password or directly using a session cookie
 Toon.Login("test", "test")  # Not recommended to hardcode credentials
 # Toon.Login("PHPSESSIDCOOKIE")  # Alternatively, use a session cookie
+
+Toon.LoadToon("660008edde152") # Load a toon, some toons may not work.
 
 # Draw a line with optional parameters
 Toon.DrawLine(
