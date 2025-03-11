@@ -1,0 +1,9 @@
+[project]
+name = "pytoon"
+version = "0.1"
+authors = [
+  { name="SanyIS", email="saniyandre@gmail.com" },
+]
+description = "A package for interacting with Toonio toon files"
+readme = "README.md"
+requires-python = ">=3.8"
