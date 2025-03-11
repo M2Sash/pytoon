@@ -2,7 +2,8 @@
 
 Python package for interacting with (Toonio)[https://toonio.ru] toon files.
 
-#⚠️ For Educational & Fun Purposes Only! ⚠️
+# For Educational & Fun Purposes Only! ⚠️
+
 With all due respect to the creator [@krotyara](https://github.com/kr0tyara), this project is not intended for creating bots or spamming the website. Please respect the platform and its community.
 
 Big shoutout to Krotyara — he's a genuinely cool guy who actually cares about his community (unlike... [them](https://multator.ru)). He even gave me (and my friend) a cool hacker badge! 
