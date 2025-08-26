@@ -1,6 +1,9 @@
 # PyToon
+**RIP Toonio -- 2019-2025**
 
-Python package for interacting with [Toonio](https:/en.toonio.ru) toon files.
+This project will not be maintained due to the shutdown of Toonio (duuuh), and it was not planned to be revealed to the public.
+
+Python package for interacting with [Toonio](https://en.toonio.ru) toon files.
 
 # For Educational & Fun Purposes Only! ⚠️
 
