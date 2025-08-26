@@ -1,12 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "pytoon"
 version = "1.0.0"
 authors = [
-  { name="SanyIS" },
+  { name = "SanyIS", email = "sash@m2sash.xyz" },
 ]
 description = "A package to interact with Toonio.RU"
 readme = "README.md"
 requires-python = ">=3.8"
+dependencies = [
+  "pillow",
+  "requests",
+  "tqdm",
+  "numpy",
+]
 
-[tool.setuptools]
-packages = ["pytoon"]
+[tool.setuptools.packages.find]
+where = ["src"]
