@@ -1,3 +1,5 @@
+# pytoon by M2Sash on Github
+import tqdm
 import numpy as np
 import base64, io, json, requests
 from pytoon.JavaScript import JavaScript
@@ -270,6 +272,7 @@ class Toonio:
 
 
     def Generate(self, binary=False):
+        print("GEN")
         data = []
         
         def write(value):
@@ -319,7 +322,7 @@ class Toonio:
             for char in layer["name"]:
                 write(ord(char))
 
-            for frame in layer["frames"]:
+            for frame in tqdm.tqdm(layer["frames"]):
                 if not frame["lines"]:  # Frame reuse optimization
                     write(1)
                     continue
@@ -443,7 +446,7 @@ class Toonio:
             return None
 
 
-    def Save(self, title="Draft", description="", draft=True, scrible=True, nsfw=False):
+    def Save(self, title="Draft", description="", draft=True, scrible=True, nsfw=False, dat=None):
         s = requests.Session()
         s.cookies.set("PHPSESSID", self.session)
 
@@ -457,10 +460,14 @@ class Toonio:
         
         if self.edit != None:
             data["edit"] = self.edit
-
+        if not dat:
+            to = self.Generate(True)
+        else:
+            to = dat
+        print("Sending", len(to))
         resp = s.post("https://toonio.ru/Server/Save2", 
             files={
-                "toon": ('toon', self.Generate(True), 'application/octet-stream'),
+                "toon": ('toon', to, 'application/octet-stream'),
                 "preview": ('preview', self.CreateGif(), 'image/gif') 
             }, 
             data=data
